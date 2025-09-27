@@ -25,10 +25,13 @@ It helps students organize their study schedule, manage tasks, and track academi
 ---
 
 ## 📷 Preview
-![Screenshot 1](images/screenshot1.png)  
-![Screenshot 2](images/screenshot2.png)  
-![Screenshot 3](images/screenshot3.png)  
-![Screenshot 4](images/screenshot4.png)  
+![Screenshot 1]<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/a53f9944-7bb1-4ea1-801d-43eee49b720d" />
+
+![Screenshot 2]<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/938b2649-a970-4dd1-bc46-76409eb87916" /> 
+
+![Screenshot 3]<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/579a750e-0fae-4afb-9c91-69a0add77057" />
+
+![Screenshot 4]<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/6a2ceb57-ea11-4cf2-b5c1-79d7ef888d7c" /> 
 
 > 💡 Replace these images with your actual screenshots in the `images/` folder.
 
