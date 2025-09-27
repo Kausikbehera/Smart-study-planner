@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Planner - Portfolio Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">StudyPlanner</div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#planner">Planner</a></li>
+                    <li><a href="#timeline">Timeline</a></li>
+                    <li><a href="#progress">Progress</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Smart Study Planner</h1>
+            <p>Organize your study schedule, track your progress, and achieve your academic goals with our intuitive study planner</p>
+            <div class="hero-buttons">
+                <a href="#planner" class="btn">Get Started</a>
+                <a href="#features" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="container">
+        <h2 class="section-title">Features</h2>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-tasks"></i></div>
+                <h3>Task Management</h3>
+                <p>Create, organize, and prioritize your study tasks with ease. Set deadlines and track your progress.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
+                <h3>Visual Timeline</h3>
+                <p>Visualize your study schedule with an interactive timeline that shows upcoming deadlines and milestones.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Progress Tracking</h3>
+                <p>Monitor your academic progress with visual statistics and completion metrics to stay motivated.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planner Interface -->
+    <section id="planner" class="planner-interface">
+        <div class="container">
+            <h2 class="section-title">Study Planner</h2>
+            <div class="planner-container">
+                <!-- Task Form -->
+                <div class="task-form">
+                    <h3>Add New Task</h3>
+                    <form id="addTaskForm">
+                        <div class="form-group">
+                            <label for="taskTitle">Task Title</label>
+                            <input type="text" id="taskTitle" class="form-control" placeholder="e.g., Complete Math Assignment" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="taskSubject">Subject</label>
+                            <input type="text" id="taskSubject" class="form-control" placeholder="e.g., Mathematics">
+                        </div>
+                        <div class="form-group">
+                            <label for="taskDueDate">Due Date</label>
+                            <input type="datetime-local" id="taskDueDate" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="taskPriority">Priority</label>
+                            <select id="taskPriority" class="form-control">
+                                <option value="low">Low</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="taskDescription">Description</label>
+                            <textarea id="taskDescription" class="form-control" placeholder="Task details..."></textarea>
+                        </div>
+                        <button type="submit" class="btn">Add Task</button>
+                    </form>
+                </div>
+
+                <!-- Task List -->
+                <div class="task-list">
+                    <div class="task-header">
+                        <h3>Your Tasks</h3>
+                        <div class="filter-options">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="pending">Pending</button>
+                            <button class="filter-btn" data-filter="completed">Completed</button>
+                        </div>
+                    </div>
+                    <div id="tasksContainer"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline-section container">
+        <h2 class="section-title">Study Timeline</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <div class="timeline-date">Monday, Oct 10</div>
+                    <h3>Mathematics Assignment</h3>
+                    <p>Complete chapter 5 exercises on calculus</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <div class="timeline-date">Wednesday, Oct 12</div>
+                    <h3>Physics Lab Report</h3>
+                    <p>Submit lab report on Newton's laws of motion</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <div class="timeline-date">Friday, Oct 14</div>
+                    <h3>Literature Essay</h3>
+                    <p>2000-word essay on Shakespeare's sonnets</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <div class="timeline-date">Monday, Oct 17</div>
+                    <h3>Chemistry Quiz</h3>
+                    <p>Prepare for quiz on organic chemistry</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Section -->
+    <section id="progress" class="progress-section">
+        <div class="container">
+            <h2 class="section-title">Your Progress</h2>
+            <div class="progress-cards">
+                <div class="progress-card">
+                    <div class="progress-number" id="totalTasks">0</div>
+                    <div class="progress-title">Total Tasks</div>
+                </div>
+                <div class="progress-card">
+                    <div class="progress-number" id="completedTasks">0</div>
+                    <div class="progress-title">Completed Tasks</div>
+                </div>
+                <div class="progress-card">
+                    <div class="progress-number" id="completionRate">0%</div>
+                    <div class="progress-title">Completion Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Smart Study Planner</h3>
+                <p>A portfolio project demonstrating modern web development skills with HTML, CSS, and JavaScript</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <p class="copyright">© 2023 Smart Study Planner. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">Task added successfully!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
